@@ -1,0 +1,22 @@
+- Work on code academy
+ - What were my questions?
+ - What did I get stuck on?
+
+pyg = 'ay'
+
+original = raw_input('Enter a word:')
+
+if len(original) > 0 and original.isalpha():
+    print original
+    word=original.lower()
+    first=word[0]
+    new_word=word[1:]+first+pyg
+    print new_word
+else:
+    print 'empty'
+
+github: www.github.com
+
+user - bjornstclair
+passwd = bj0rn1234
+
