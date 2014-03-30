@@ -2,7 +2,7 @@ __author__ = 'bjorn'
 
 pyg = 'ay'
 
-original = raw_input('Enter a word: ')
+original = raw_input('Enter one word: ')
 
 if len(original) > 0 and original.isalpha():
     print original+' in Pig Latin is'
