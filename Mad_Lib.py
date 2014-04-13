@@ -15,6 +15,20 @@ def choose_story():
     story = int(raw_input("Which story do you want? "))
     return files[story-1]
 
+
+def get_player_words(word_map, words_to_replace):
+    replacement_list=[]
+    for word in words_to_replace:
+        if (word.find("#") == -1):
+            prompt="Enter "+word_map[word]+": "
+            word_entered = raw_input(prompt)
+            replacement_list.append(word_entered)
+        else:
+            (type, refnum) = word.split("#")
+            type_indices = [t[1] for t in zip(words_to_replace,range(len(words_to_replace))) if t[0] == type]
+            replacement_list.append(replacement_list[type_indices[int(refnum)-1]])
+    return replacement_list
+
 story_file = choose_story()
 
 if debug:
@@ -43,10 +57,7 @@ if debug:
 if debug:
     print story
 
-def get_player_words(word_map, words_to_replace):
-    replacement_list=[]
-    for word in words_to_replace:
-        prompt="Enter "+word_map[word]+": "
-        word_entered = raw_input(prompt)
-        replacement_list.append(word_entered)
-    return replacement_list
+replacements = get_player_words(word_map, words_to_replace)
+
+if debug:
+    print replacements
