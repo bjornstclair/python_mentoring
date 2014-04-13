@@ -43,3 +43,10 @@ if debug:
 if debug:
     print story
 
+def get_player_words(word_map, words_to_replace):
+    replacement_list=[]
+    for word in words_to_replace:
+        prompt="Enter "+word_map[word]+": "
+        word_entered = raw_input(prompt)
+        replacement_list.append(word_entered)
+    return replacement_list
