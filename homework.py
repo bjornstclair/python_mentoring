@@ -1,4 +1,4 @@
 __author__ = 'Kids'
 
-str = "________________________________________________";
+str = "_words_";
 print str.replace("old_word", "new_word");
