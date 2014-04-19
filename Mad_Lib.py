@@ -49,14 +49,21 @@ words_to_replace = re.findall( "_(.*?)_", story)
 
 word_map = {
     "NOUN": "a noun (object or thing)",
+    "NOUN-PLURAL": "a plural noun (objects or things)",
     "PRONOUN": "a singular pronoun (he, she, it, etc.)",
     "PRONOUN-POSSESSIVE": "a possessive pronoun (his, her, its)",
-    "VERB-PRESENT": "a verb, present tense",
-    "VERB-PAST": "a verb, past tense",
+    "VERB-PRESENT": "a verb, present tense (run)",
+    "VERB-PAST": "a verb, past tense (ran)",
+    "VERB-PROGRESSIVE": "a verb, present progressive tense (running)",
     "ADJECTIVE": "an adjective",
+    "FLAVOR": "a flavor adjective",
+    "FOOD": "a type of food",
+    "SUPERLATIVE": "a superlative adjective (best, worst, highest, etc.)",
     "NAME": "someone's name",
     "PART-OF-BODY": "a body part",
-    "VERB-FUTURE": "a verb, future tense"
+    "VERB-FUTURE": "a verb, future tense",
+    "NUMBER": "a number (1, 34, 42)",
+    "NUMBER-ORDINAL": "an ordinal number (1st, 55th)"
 }
 
 if debug:
