@@ -50,7 +50,7 @@ words_to_replace = re.findall( "_(.*?)_", story)
 word_map = {
     "NOUN": "a noun (object or thing)",
     "PRONOUN": "a singular pronoun (he, she, it, etc.)",
-    "PRONOUN_POSSESSIVE": "a possessive pronoun (his, her, its)",
+    "PRONOUN-POSSESSIVE": "a possessive pronoun (his, her, its)",
     "VERB-PRESENT": "a verb, present tense",
     "VERB-PAST": "a verb, past tense",
     "ADJECTIVE": "an adjective",
