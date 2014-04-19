@@ -29,6 +29,13 @@ def get_player_words(word_map, words_to_replace):
             replacement_list.append(replacement_list[type_indices[int(refnum)-1]])
     return replacement_list
 
+def replace_words_in_story(replacements, words_to_replace, story):
+    story_chosen = story
+    for idx in range(len(replacements)):
+        story_chosen = story_chosen.replace(words_to_replace[idx], replacements[idx], 1)
+    return story_chosen
+
+
 story_file = choose_story()
 
 if debug:
@@ -61,3 +68,6 @@ replacements = get_player_words(word_map, words_to_replace)
 
 if debug:
     print replacements
+
+new_story = replace_words_in_story(replacements, words_to_replace, story)
+print new_story
