@@ -3,7 +3,7 @@ __author__ = 'Bjorn'
 import os
 import re
 
-debug = True
+debug = False
 
 def list_stories():
     return os.listdir("stories")
@@ -63,7 +63,11 @@ word_map = {
     "PART-OF-BODY": "a body part",
     "VERB-FUTURE": "a verb, future tense",
     "NUMBER": "a number (1, 34, 42)",
-    "NUMBER-ORDINAL": "an ordinal number (1st, 55th)"
+    "NUMBER-ORDINAL": "an ordinal number (1st, 55th)",
+    "CITY": "name of a city",
+    "COUNTRY": "name of country",
+    "FUNNY-SOUNDING-WORD": "a funny sounding nonsense word",
+    "TECHNICAL-TERM": "a word that sounds 'techy'"
 }
 
 if debug:
