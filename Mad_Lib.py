@@ -32,7 +32,7 @@ def get_player_words(word_map, words_to_replace):
 def replace_words_in_story(replacements, words_to_replace, story):
     story_chosen = story
     for idx in range(len(replacements)):
-        story_chosen = story_chosen.replace(words_to_replace[idx], replacements[idx], 1)
+        story_chosen = story_chosen.replace("_"+words_to_replace[idx]+"_", replacements[idx], 1)
     return story_chosen
 
 
@@ -67,7 +67,8 @@ word_map = {
     "CITY": "name of a city",
     "COUNTRY": "name of country",
     "FUNNY-SOUNDING-WORD": "a funny sounding nonsense word",
-    "TECHNICAL-TERM": "a word that sounds 'techy'"
+    "TECHNICAL-TERM": "a word that sounds 'techy'",
+    "SOUND": "a sound word (buzz, sproing, ding, etc.)"
 }
 
 if debug:
